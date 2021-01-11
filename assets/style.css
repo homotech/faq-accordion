@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  list-style-type: none;
+  font-family: monte;
+}
+@font-face {
+  font-family: "monte";
+  src: url("./fonts/Montserrat-Regular.woff") format("woff");
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  height: 100vh;
+}
+.answer-input-check > input {
+  display: none;
+}
+.questions > .question-svg > label {
+  padding: 0 20px;
+  cursor: pointer;
+}
+.inactive {
+  color: hsl(238, 29%, 16%);
+}
+.active {
+  font-weight: 700;
+}
+.questions > .question-svg {
+  display: flex;
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 10px 5px;
+  margin: 5px 10px;
+}
+.questions > .question-svg > p {
+  font-size: 14px;
+}
+.questions > .question-svg > p:hover {
+  color: hsl(14, 88%, 65%);
+}
+.container > .header {
+  display: block;
+  text-align: center;
+}
+.answer-input-check > .answer {
+  display: none;
+  color: hsl(237, 12%, 33%);
+  font-size: 12px;
+}
+
+.answer-input-check > #toggle:checked + .answer,
+.answer-input-check > #toggle2:checked + .answer,
+.answer-input-check > #toggle3:checked + .answer,
+.answer-input-check > #toggle4:checked + .answer,
+.answer-input-check > #toggle5:checked + .answer,
+.answer-input-check > #toggle6:checked + .answer {
+  display: block;
+}
+.footer {
+  display: block;
+}
+.footer > p {
+  font-weight: 400;
+  color: #d4d4d4;
+  position: relative;
+  text-align: center;
+}
+.footer > p > span {
+  border-radius: 20px;
+  padding: 2px 7px;
+  margin: 0 5px;
+  /* width: 40px; */
+  /* height: 20px; */
+  border: 2px solid;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+@media only screen and (max-width: 375px) {
+  .main {
+    margin-top: 20px;
+  }
+  .illustration-mobile {
+    /* position: absolute; */
+    position: relative;
+    top: 6%;
+    left: 8%;
+    height: 110px;
+    /* margin-top: 100px; */
+  }
+  .main > .illustration-desktop {
+    display: none;
+  }
+  .mobile::before {
+    content: url("./Images/bg-pattern-mobile.svg");
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    width: 100%;
+    z-index: 10;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 400px;
+    border-radius: 20px;
+    padding-top: 40%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+  }
+
+  /* .main > .illustration-mobile {
+    display: none;
+  } */
+}
+@media only screen and (min-width: 376px) {
+  body {
+    overflow: hidden;
+  }
+  .main {
+    display: flex;
+    width: 70%;
+    position: relative;
+    top: 24%;
+    border-radius: 10px;
+    /* height: 60vh; */
+    margin: 0 auto;
+    background-color: #fff;
+    flex-direction: row;
+    filter: drop-shadow(-3px 3px 10px rgba(0, 0, 0, 0.5));
+    /* padding: 40px 0; */
+  }
+  .footer > p {
+    margin-top: 13%;
+  }
+  .main > .illustration-mobile {
+    display: none;
+  }
+  .main > .illustration-desktop::before {
+    content: url("./Images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 32%;
+    left: 1%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: drop-shadow(-3px 3px 10px rgba(0, 0, 0, 0.3));
+    /* box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.4); */
+    /* display: flex; */
+  }
+  .main > .illustration-desktop > .desktop > .illustration-desktop-bg {
+    width: 700px;
+    position: absolute;
+    top: -46%;
+    left: -95%;
+    /* z-index: 3; */
+  }
+  .main > .illustration-desktop {
+    position: relative;
+    top: 0;
+    left: -10%;
+    /* display: flex; */
+  }
+  .main > .illustration-desktop > .desktop {
+    padding-top: 50px;
+    width: 400px;
+    left: 20%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .desktop > img {
+    position: relative;
+    width: 400px;
+    left: -80px;
+  }
+  .main > .illustration-desktop,
+  .main > .container {
+    flex: 1;
+  }
+  .main > .container {
+    padding: 40px 10px;
+  }
+}
