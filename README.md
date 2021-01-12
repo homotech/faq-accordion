@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ Accordion Card
 
+https://homotech.github.io/faq-accordion/index.html
+
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
